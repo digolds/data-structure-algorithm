@@ -37,6 +37,7 @@ class DoublyLinkedList:
             new_node.next = self.head
             self.head.pre = new_node
             self.head = new_node
+        self.count += 1
 
     def remove_from_head(self):
         val = self.head.value
@@ -61,14 +62,14 @@ class DoublyLinkedList:
             print(current_node.value)
             current_node = next_node(current_node)
 
-double_linked_list = DoublyLinkedList()
-double_linked_list.add_to_tail(1)
-double_linked_list.add_to_tail(10)
-double_linked_list.add_to_tail(90)
-double_linked_list.add_to_tail(100)
-double_linked_list.add_to_tail(2)
-
-print('traverse from head')
-double_linked_list.print_all()
-print('traverse from tail')
-double_linked_list.print_all(True)
+if __name__ == "__main__":
+    double_linked_list = DoublyLinkedList()
+    double_linked_list.add_to_tail(1)
+    double_linked_list.add_to_tail(10)
+    double_linked_list.add_to_tail(90)
+    double_linked_list.add_to_tail(100)
+    double_linked_list.add_to_tail(2)
+    print('traverse from head')
+    double_linked_list.print_all()
+    print('traverse from tail')
+    double_linked_list.print_all(True)

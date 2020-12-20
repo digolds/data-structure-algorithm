@@ -35,11 +35,11 @@ class SinglyLinkedList:
             print(current_node.value)
             current_node = current_node.next
 
-single_linked_list = SinglyLinkedList()
-single_linked_list.add_to_tail(1)
-single_linked_list.add_to_tail(10)
-single_linked_list.add_to_tail(90)
-single_linked_list.add_to_tail(100)
-single_linked_list.add_to_tail(2)
-
-single_linked_list.print_all()
+if __name__ == "__main__":
+    single_linked_list = SinglyLinkedList()
+    single_linked_list.add_to_tail(1)
+    single_linked_list.add_to_tail(10)
+    single_linked_list.add_to_tail(90)
+    single_linked_list.add_to_tail(100)
+    single_linked_list.add_to_tail(2)
+    single_linked_list.print_all()
