@@ -12,13 +12,31 @@ class DoublyLinkedList:
 
     def add_to_tail(self, val):
         new_node = DoublyLinkedListNode(val)
-        if self.count == 0:
+        if self.empty():
             self.tail = self.head = new_node
         else:
             new_node.pre = self.tail
             self.tail.next = new_node
             self.tail = new_node
         self.count += 1
+    
+    def remove_from_tail(self):
+        val = self.tail.value
+        self.count -= 1
+        if self.empty():
+            self.head = self.tail = None
+        else:
+            self.tail.pre.next = None
+        return val
+    
+    def add_to_head(self, val):
+        new_node = DoublyLinkedListNode(val)
+        if self.empty():
+            self.tail = self.head = new_node
+        else:
+            new_node.next = self.head
+            self.head.pre = new_node
+            self.head = new_node
 
     def remove_from_head(self):
         val = self.head.value
