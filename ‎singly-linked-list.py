@@ -28,7 +28,7 @@ class SinglyLinkedList:
 
     def empty(self):
         return self.count == 0
-    
+
     def print_all(self):
         current_node = self.head
         while current_node:
